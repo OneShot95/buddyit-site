@@ -1,11 +1,12 @@
 :root {
-  --accent: #7BA05B;
-  --accent-hover: #5F7F45;
-  --hero-band: #F3F7EF;
-  --text: #111;
-  --muted: #444;
-  --bg: #fff;
-  --border: #e5e7eb;
+  --bg: #0B1220;
+  --surface: #141C2E;
+  --text: #F5F7FA;
+  --muted: #9AA4B2;
+  --teal: #2EC4B6;
+  --coral: #FF6B5B;
+  --coral-hover: #E85A4B;
+  --border: rgba(255, 255, 255, 0.08);
 }
 
 * { box-sizing: border-box; }
@@ -15,15 +16,15 @@ body {
   font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
   color: var(--text);
   background: var(--bg);
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
-a { color: var(--accent); }
+a { color: var(--teal); }
 
 .site-header,
 .site-footer,
 main {
-  max-width: 960px;
+  max-width: 1000px;
   margin: 0 auto;
   padding: 1rem 1.25rem;
 }
@@ -40,11 +41,7 @@ main {
 .logo {
   display: inline-flex;
   align-items: center;
-  gap: 0.6rem;
-  font-weight: 700;
   text-decoration: none;
-  color: var(--text);
-  font-size: 1.15rem;
 }
 
 .logo-img {
@@ -57,52 +54,75 @@ main {
 
 nav {
   display: flex;
-  gap: 1rem;
+  gap: 1.1rem;
 }
 
 nav a {
   text-decoration: none;
   color: var(--muted);
+  font-weight: 500;
 }
 
-nav a:hover { color: var(--accent); }
+nav a:hover { color: var(--teal); }
 
 .hero {
-  margin: 1rem 0 1.5rem;
-  padding: 2.75rem 1.35rem;
-  background: linear-gradient(180deg, var(--hero-band) 0%, #fff 100%);
-  border-radius: 0.75rem;
+  margin: 1.5rem 0 2rem;
+  padding: 3rem 1.5rem;
+  text-align: center;
+  background:
+    radial-gradient(ellipse at top, rgba(46, 196, 182, 0.12), transparent 55%),
+    var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+}
+
+.hero-logo {
+  width: 140px;
+  height: auto;
+  margin: 0 auto 1.5rem;
+  display: block;
+  border-radius: 1rem;
 }
 
 .hero h1 {
-  margin: 0 0 0.5rem;
-  font-size: clamp(2rem, 5vw, 2.5rem);
+  margin: 0 0 0.75rem;
+  font-size: clamp(2rem, 5vw, 2.75rem);
   line-height: 1.15;
+  letter-spacing: -0.02em;
 }
 
-.sub { color: var(--muted); margin: 0 0 1.25rem; }
+.sub {
+  color: var(--muted);
+  margin: 0 auto 1.5rem;
+  max-width: 32rem;
+}
 
 .button {
   display: inline-block;
-  background: var(--accent);
+  background: var(--coral);
   color: #fff;
   text-decoration: none;
-  padding: 0.95rem 1.5rem;
-  border-radius: 0.55rem;
+  padding: 0.95rem 1.6rem;
+  border-radius: 999px;
   font-weight: 700;
 }
 
 .button:hover {
-  background: var(--accent-hover);
+  background: var(--coral-hover);
+  color: #fff;
 }
 
 .trust-line {
-  margin: 1rem 0 0;
+  margin: 1.15rem 0 0;
   color: var(--muted);
   font-size: 0.95rem;
 }
 
-.cards h2 { margin: 1.5rem 0 1rem; }
+.cards h2 {
+  margin: 0 0 1.25rem;
+  text-align: center;
+  font-size: 1.5rem;
+}
 
 .card-grid {
   display: grid;
@@ -115,125 +135,50 @@ nav a:hover { color: var(--accent); }
 }
 
 .card {
+  background: var(--surface);
   border: 1px solid var(--border);
-  border-left: 4px solid var(--accent);
-  border-radius: 0.75rem;
+  border-left: 3px solid var(--teal);
+  border-radius: 0.9rem;
   padding: 1.4rem 1.25rem;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
 }
 
 .card h3 {
-  margin: 0 0 0.4rem;
-  font-size: 1.2rem;
+  margin: 0 0 0.45rem;
+  font-size: 1.15rem;
 }
 
-.card p { margin: 0; color: var(--muted); }
-
-.area {
-  margin: 1.5rem 0;
-  padding: 1rem 0;
-  border-top: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
+.card p {
+  margin: 0;
   color: var(--muted);
 }
 
-.contact-strip {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  margin: 1.5rem 0;
-}
-
-.site-footer {
-  border-top: 1px solid var(--border);
-  color: var(--muted);
-  font-size: 0.95rem;
-}  border-bottom: 1px solid var(--border);
-}
-
-.logo {
-  font-weight: 700;
-  text-decoration: none;
-  color: var(--text);
-}
-
-nav {
-  display: flex;
-  gap: 1rem;
-}
-
-nav a {
-  text-decoration: none;
-  color: var(--muted);
-}
-
-nav a:hover { color: var(--accent); }
-
-.hero {
-  margin: 1rem 0 1.5rem;
-  padding: 2.5rem 1.25rem;
-  background: var(--hero-band);
-  border-radius: 0.75rem;
-}
-
-.hero h1 {
-  margin: 0 0 0.5rem;
-  font-size: clamp(1.75rem, 4vw, 2.25rem);
-  line-height: 1.2;
-}
-
-.sub { color: var(--muted); margin: 0 0 1.25rem; }
-
-.button {
-  display: inline-block;
-  background: var(--accent);
-  color: #fff;
-  text-decoration: none;
-  padding: 0.75rem 1.25rem;
-  border-radius: 0.5rem;
-  font-weight: 600;
-}
-
-.button:hover {
-  background: var(--accent-hover);
-  filter: none;
-}
-
-.cards h2 { margin: 1.5rem 0 1rem; }
-
-.card-grid {
-  display: grid;
-  gap: 1rem;
-  grid-template-columns: 1fr;
-}
-
-@media (min-width: 700px) {
-  .card-grid { grid-template-columns: repeat(3, 1fr); }
-}
-
-.card {
+.area,
+.cta-band {
+  margin: 2rem 0;
+  padding: 1.5rem 1.25rem;
+  background: var(--surface);
   border: 1px solid var(--border);
-  border-radius: 0.75rem;
-  padding: 1.25rem 1.2rem;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+  border-radius: 0.9rem;
+  text-align: center;
+  color: var(--muted);
 }
 
-.card h3 { margin: 0 0 0.35rem; }
+.cta-band h2 {
+  margin: 0 0 0.5rem;
+  color: var(--text);
+  font-size: 1.4rem;
+}
 
-.card p { margin: 0; color: var(--muted); }
-
-.area {
-  margin: 1.5rem 0;
-  padding: 1rem 0;
-  border-top: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
-  color: var(--muted);
+.cta-band p {
+  margin: 0 0 1.25rem;
 }
 
 .contact-strip {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
+  justify-content: center;
+  gap: 1.25rem;
   margin: 1.5rem 0;
 }
 
@@ -241,4 +186,5 @@ nav a:hover { color: var(--accent); }
   border-top: 1px solid var(--border);
   color: var(--muted);
   font-size: 0.95rem;
+  text-align: center;
 }
