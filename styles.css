@@ -55,7 +55,12 @@ nav a {
 
 nav a:hover { color: var(--accent); }
 
-.hero { padding: 2.5rem 0 1.5rem; }
+.hero {
+  margin: 1rem 0 1.5rem;
+  padding: 2.5rem 1.25rem;
+  background: var(--hero-band);
+  border-radius: 0.75rem;
+}
 
 .hero h1 {
   margin: 0 0 0.5rem;
@@ -75,7 +80,10 @@ nav a:hover { color: var(--accent); }
   font-weight: 600;
 }
 
-.button:hover { filter: brightness(0.95); }
+.button:hover {
+  background: var(--accent-hover);
+  filter: none;
+}
 
 .cards h2 { margin: 1.5rem 0 1rem; }
 
@@ -92,7 +100,8 @@ nav a:hover { color: var(--accent); }
 .card {
   border: 1px solid var(--border);
   border-radius: 0.75rem;
-  padding: 1rem 1.1rem;
+  padding: 1.25rem 1.2rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
 }
 
 .card h3 { margin: 0 0 0.35rem; }
