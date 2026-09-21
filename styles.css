@@ -1,5 +1,7 @@
 :root {
-  --accent: #0B5FFF;
+  --accent: #7BA05B;
+  --accent-hover: #5F7F45;
+  --hero-band: #F3F7EF;
   --text: #111;
   --muted: #444;
   --bg: #fff;
